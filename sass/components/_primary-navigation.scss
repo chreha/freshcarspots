@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+.primary-navigation ul {
+    list-style-type: none;
+    padding-block-start: size(32);
+}
+.primary-navigation .icon-btn {
+    text-transform: none;
+}
+.primary-navigation svg + span {
+    display:none;
+}
+.primary-navigation svg {
+    border:2px solid currentColor;
+    padding:.25em;
+    border-radius: 50%;
+}
+@media(max-width:850px) {
+    .primary-navigation .flex-group.space-between {
+        justify-content:center;
+        margin-block-end:size(24);
+    }
+}
+@media(min-width:470px) {
+    .primary-navigation svg + span {
+        display:inline;
+    }
+}

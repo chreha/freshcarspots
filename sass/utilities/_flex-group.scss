@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+
+.flex-group {    
+    display:flex;
+    flex-wrap:wrap;
+    column-gap: var(--flex-column-gap, $flex-group-gap);
+    row-gap: var(--flex-row-gap, calc($flex-group-gap / 2));
+    width:fit-content;  
+    
+    &[data-two-column-stretch] {
+        width: var(--max-width);
+    }
+
+    &[data-two-column-stretch] > * {        
+        flex-basis: calc(50% - ($flex-group-gap / 2));
+        flex-grow: 1;
+        justify-content: center;        
+    }
+    &.space-between {
+        justify-content: space-between;        
+        width:100%;
+    }
+    &.justify-center{
+        justify-content: center;                
+    }
+    &.fill-cell {
+        width:100%;
+    }
+    &.no-wrap {
+        flex-wrap:nowrap;
+    }    
+    &.align-center {
+        align-items:center;
+    }
+    &.align-start {
+        align-items:flex-start;
+    }
+}
+.flex-group.mx-auto {
+    justify-content: center;
+}

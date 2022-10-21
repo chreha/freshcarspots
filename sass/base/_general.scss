@@ -1,0 +1,58 @@
+@use '../abstracts/' as *;
+body {
+    font-size: fs(400);
+    font-weight: fw("regular");
+    font-family: $ff-sans;
+    color: clr("neutral", 900);
+    background-color: clr("neutral", 100);    
+}
+
+.position-relative {
+    position:relative;
+}
+a {
+    color:inherit;
+    text-decoration: none;
+    font-weight:fw("bold");
+}
+p {
+    line-height:1.5;
+}
+img {
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+.mx-auto {
+    margin-inline:auto;
+}
+.form-group label{
+    display:block;
+}
+.form-group {
+    width:calc(50% - ($flex-group-gap / 2));
+}
+.form-group > * {
+    width:100%;    
+}
+.form-group input[type=file]{
+    border:1px solid currentColor;
+    border-radius:5px;
+    padding:.5em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-size:1rem;
+    padding:.7em;
+    margin-block:.25em;
+}
+footer {    
+    color:clr(neutral, 200);    
+}
+h1, h2 {
+    font-family: $ff-rale;
+}
+button {
+    cursor: pointer;
+}

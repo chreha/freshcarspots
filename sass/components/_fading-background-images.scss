@@ -1,0 +1,21 @@
+.fading-background-images {
+    position:absolute;    
+    inset: 0 0 0 0;
+    z-index:-1;
+    & li {
+        position:absolute;
+        inset: 0 0 0 0;
+        opacity:0;
+        z-index:-2;    
+        transition: .5s opacity linear;    
+        &.active {
+            opacity:1;
+            z-index:-1;
+        }
+        & img {
+            height:100%;
+            width:100%;
+            object-fit:cover;
+        }
+    }    
+}
